@@ -23,10 +23,11 @@ let plotTitle = document.getElementById('plot-title');
 
 submitButton.addEventListener('click',test);
 
-function test (){
+function test (event){
+    event.preventDefault();
     const movieValue = inputBox.value;
 
-    var api = 'http://www.omdbapi.com/?t=' + movieValue + '&apikey=fcae0c6d';
+    var api = 'https://www.omdbapi.com/?t=' + movieValue + '&apikey=fcae0c6d';
 
     fetch(api)
         .then((res) => res.json())
