@@ -22,10 +22,16 @@ let plotTitle = document.getElementById('plot-title');
 
 
 submitButton.addEventListener('click',test);
+document.addEventListener('keypress',function(event){
+    if (event.keyCode === 13){
+        test()
+    }
+})
 
-function test (event){
-    event.preventDefault();
+function test (){
     const movieValue = inputBox.value;
+    
+  
 
     var api = 'https://www.omdbapi.com/?t=' + movieValue + '&apikey=fcae0c6d';
 
@@ -80,3 +86,33 @@ function test (event){
 }
 
 
+var api = 'https://www.omdbapi.com/?s=kiss&page=4&apikey=fcae0c6d';
+
+fetch(api)
+    .then((res) => res.json())
+    .then((data) => {
+        const movies = data.Search;
+        // for (let j = 0; j < movies.length; j++){
+
+        //     console.log(movies[j]);
+            
+        //     }
+
+
+  
+        console.log(data.Search);
+    })
+
+// Pagination
+    // https://www.omdbapi.com/?s=kiss&page=8&apikey=fcae0c6d
+
+
+    // movies.forEach(myFunction);
+    
+    // function myFunction(item, index) {
+    //   for (var key in item) {
+    //     console.log(item[key])
+    //   }
+    // }
+
+    

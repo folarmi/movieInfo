@@ -31,7 +31,7 @@ img{
 #movie-name{
     font-family: 'Merienda', cursive;
     margin-left: 2em;
-    width: 14em;
+    width: 25em;
     height: 3em;
     padding-left: 1em;
 }
@@ -44,7 +44,9 @@ button{
     background-color: #96f7d2;
     border: none;
     padding: 0.5em;
-    margin-left: 1em;
+    margin-top: 1em;
+    border-radius: 2em;
+    margin-left: 10em;
     font-family: 'Merienda', cursive;
 }
 
@@ -88,6 +90,20 @@ h4{
     margin: 2em;
 }
 
+/* .loader { */
+    /* border: 16px solid #f3f3f3; Light grey */
+    /* border-top: 16px solid #3498db; Blue */
+    /* border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+} */
+
 @media only screen and (min-width:961px){
     h1{
         font-size: 3em;
@@ -100,8 +116,16 @@ h4{
         /* font-size: 1.2em; */
     }
 
+    img{
+        margin-left: 40em;
+    }
+
     button{
     padding: 2em;
     border-radius: 2em;
+    }
+
+    .plot-details{
+        display: flex;
     }
 }
